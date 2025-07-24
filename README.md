@@ -17,8 +17,31 @@
 
 Roboflow는 영상(mp4 등) 직접 업로드를 지원하지 않으며, **프레임 이미지**를 업로드해야 합니다.
 
-### ✅ `ffmpeg` 사용 예시
-```bash
-ffmpeg -i your_video.mp4 -vf fps=5 frame_%04d.jpg
+## 2️⃣ Roboflow 프로젝트 생성 및 이미지 업로드
+1. https://roboflow.com/ 에 로그인
+
+2. Create New Project 클릭
+
+3. 프로젝트 이름 및 타입 선택 (예: Object Detection)
+
+4. Upload Images 버튼 클릭 → 추출한 프레임 이미지 업로드
+
+## 3️⃣ 라벨링 수행
+🖱️ 수동 라벨링
+업로드된 이미지에서 "Annotate" 클릭
+
+드래그하여 객체 지정 → 클래스(Label) 입력
+
+객체 여러 개 지정 가능
+
+⚡ 자동 라벨링 (옵션)
+<br>Auto Annotate 또는 Smart Labeling 기능 사용 (유료 or 기존 모델 필요)
+
+## 4️⃣ 데이터셋 생성 및 Export
+Generate Dataset 클릭
+
+사용할 포맷 선택 (YOLO, COCO, Pascal VOC 등)
+
+ZIP으로 다운로드 후 학습에 활용
 
 
